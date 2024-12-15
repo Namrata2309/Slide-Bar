@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, #6a11cb, #2575fc);
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+.container h1{
+    text-align: center;
+}
+#hamburger {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.3rem;
+    border: 2px solid white;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar {
+    width: 230px;
+    height: 800px;
+    position: absolute;
+    top: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    translate: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 20px;
+    transform: translate(-100%, 0%);
+    visibility: visible;
+}
+.open-sidebar {
+    visibility: visible;
+    transition: all 0.5s linear 0ms;
+    transform: translate(0, 0);
+}
+.close-sidebar {
+    visibility: visible;
+    transition: all 0.5s linear 0ms;
+    transform: translate(-100%, 0%);
+}
+.main-heading {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 20px;
+}
+.main-heading p {
+    font-size: 24px;
+}
+#xButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.allAnchor {
+    height: 552px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+}
+.allAnchor a {
+    text-decoration: none;
+    color: black;
+}
+.anchorTags {
+    height: 80px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 20px;
+}
+@media (max-width: 480px){
+    .container h1 {
+        display: none;
+    }
+}

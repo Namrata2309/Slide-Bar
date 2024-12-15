@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9f51394289.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Press Button to open the slide Bar</h1>
+        <div class="hamburger-Icon" id="abc">
+            <button id="hamburger" onclick="openSidebar1()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="sidebar" id="sides">
+            <div class="main-heading">
+                <p>
+                    Sidebar
+                </p>
+
+                <button id="xButton" onclick="closeSidebar1()"><i class="fa-solid fa-xmark" id="x-mark"></i></button>
+            </div>
+
+            <div class="allAnchor" id="anchor">
+                <a href="" class="anchorTags">About</a>
+                <a href="" class="anchorTags">Products</a>
+                <a href="" class="anchorTags">Services</a>
+                <a href="" class="anchorTags">Buy Now</a>
+                <a href="" class="anchorTags">Help</a>
+                <a href="" class="anchorTags">More Info</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let openSidebar = document.getElementById("hamburger");
+    let closeSidebar = document.getElementById("xButton");
+    let sideBar = document.getElementById("sides");
+    let hamburgerIcon = document.getElementById("abc")
+    function openSidebar1(){
+        sideBar.classList.add("open-sidebar");
+        hamburgerIcon.style.display = "none";
+    }
+    function closeSidebar1(){
+        sideBar.classList.add("close-sidebar");
+        setTimeout(()=>{
+            hamburgerIcon.style.display="block";
+        },500)
+    }
+
+    let allAnchortags = document.getElementById("anchor");
+    allAnchortags.addEventListener("click", (e)=>{
+        console.log("Link clicked")
+        e.preventDefault()
+    });
+</script>
+</html>
